@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import api from '../../services/api';
-import Food from '../../components/Food';
+import { Food } from '../../components/Food';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
@@ -25,7 +25,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function getFoods() {
       const response = await api.get('/foods');
-  
+
       setFoods(response.data);
     }
 
