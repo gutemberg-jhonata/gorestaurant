@@ -4,7 +4,7 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { Container } from './styles';
 import api from '../../services/api';
 
-type Food = {
+type FoodData = {
   id: number,
   name: string,
   description: string,
@@ -14,8 +14,8 @@ type Food = {
 }
 
 type FoodProps = {
-  food: Food,
-  handleEditFood: (food: Food) => void,
+  food: FoodData,
+  handleEditFood: (food: FoodData) => void,
   handleDelete: (id: number) => void
 }
 
