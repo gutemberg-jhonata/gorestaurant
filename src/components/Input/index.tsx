@@ -3,8 +3,9 @@ import {
   useRef,
   useState,
   useCallback,
-  ReactNode,
 } from 'react';
+
+import { IconType } from 'react-icons';
 
 import { useField } from '@unform/core';
 
@@ -12,7 +13,7 @@ import { Container } from './styles';
 
 type InputData = {
   name: string
-  icon?: ReactNode
+  icon?: IconType
 }
 
 type InputProps = JSX.IntrinsicElements['input'] & InputData
@@ -45,7 +46,7 @@ export const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
 
   return (
     <Container isFilled={isFilled} isFocused={isFocused}>
-      {/*Icon && <Icon size={20} />*/}
+      {Icon && <Icon size={20} />}
 
       <input
         onFocus={handleInputFocus}
